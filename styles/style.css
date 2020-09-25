@@ -16,13 +16,37 @@
     --font-color: #FFFFFF;
 }
 
+body {
+    background: url(../images/background.jpg) center/cover no-repeat;
+    color: var(--font-color);
+}
+
+.sider-left,
+.sider-right {
+    background: url(../images/sider.svg) center/cover no-repeat;
+    position: absolute;
+    width: 40%;
+    height: 40%;
+    z-index: -1;
+}
+
+.sider-right {
+    bottom: 0;
+    right: 0;
+}
+
+.sider-left {
+    transform: rotate(0.5turn);
+    top: 0;
+    left: 0;
+}
+
 header,
 footer {
     width: 100%;
     height: 8vh;
     max-height: 84px;
     background-color: var(--bg-color);
-    color: var(--font-color);
 }
 
 header > section,
@@ -36,9 +60,29 @@ footer > section {
 }
 
 main {
-    background: url(../images/background.jpg) center/cover no-repeat;
     width: 100%;
     height: 84vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+main p {
+    width: 394px;
+    font-family: 'Nunito', sans-serif;
+    text-align: justify;
+    margin-top: 37px;
+    position: relative;
+}
+
+main p:before {
+    content: '';
+    position: absolute;
+    background: url(../images/decorator-green.svg) center no-repeat;
+    height: 100%;
+    width: 11px;
+    left: -28px;
 }
 
 h2 {
@@ -49,4 +93,13 @@ h2 {
 .decorator-white {
     width: 83px;
     height: 11px;
+}
+
+.turned {
+    transform: rotate(0.5turn);
+}
+
+.logo-uj {
+    width: 200px;
+    height: 50px;
 }
