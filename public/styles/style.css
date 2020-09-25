@@ -1,6 +1,6 @@
 @font-face {
-    font-family: 'HKGrotest-Black';
-    src: url('../fonts/HKGrotesk-Black.otf') format('otf');
+    font-family: 'HKGrotest';
+    src: url('../fonts/HKGrotesk-Regular.woff') format('woff');
     font-style: normal;
     font-weight: 400;
 }
@@ -66,6 +66,20 @@ main {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    
+}
+
+main > section {
+    position: relative;
+    margin-left: 247px;
+}
+
+main h1 {
+    background: url('../images/logo-cbm.svg') center/cover no-repeat;
+    width: 187px;
+    height: 106px;
+    position: absolute;
+    left: -247px;
 }
 
 main p {
@@ -86,7 +100,7 @@ main p:before {
 }
 
 h2 {
-    font-family: 'HKGrotest-Black';
+    font-family: 'HKGrotest';
     font-size: 16px;
 }
 
@@ -102,4 +116,5 @@ h2 {
 .logo-uj {
     width: 200px;
     height: 50px;
+    max-height: 80%;
 }
